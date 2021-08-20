@@ -120,10 +120,10 @@ func reactAdd(s *discordgo.Session, r *discordgo.MessageReactionAdd) {
 		if err != nil {
 			log.Panicf("%v", err)
 		}
-		for _, role := range roles {
-			if role.Name == "Muted" {
+		for _, r := range roles {
+			if r.Name == "Muted" {
 				// Give the user the Muted role
-				s.GuildMemberRoleAdd(g, id, role.ID)
+				s.GuildMemberRoleAdd(g, id, r.ID)
 				return
 			}
 		}
