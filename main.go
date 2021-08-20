@@ -129,13 +129,14 @@ func reactAdd(s *discordgo.Session, r *discordgo.MessageReactionAdd) {
 		}
 
 		// Create the missing roles and give the role
+		//
+		// The role is grey; the user only gets permissions to read channels.
+		// Servers will have to revoke permissions manually due to Discord not
+		// giving privileges to allow these kinds of interactions (afaik).
 		role, err := s.GuildRoleCreate(g)
 		if err != nil {
 			log.Panicf("%v", err)
 		}
-		// The role is grey; the user only gets permissions to read channels.
-		// Servers will have to revoke permissions manually due to Discord not
-		// giving privileges to allow these kinds of interactions (afaik).
 		s.GuildRoleEdit(g, role.ID, "Muted", 6052956, false, 66560, false)
 	}
 }
