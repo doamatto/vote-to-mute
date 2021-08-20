@@ -55,7 +55,7 @@ func cmd(s *discordgo.Session, m *discordgo.MessageCreate) {
 			s.ChannelMessageSend(m.ChannelID, "Voting to mute several people isn't here.. yet. Check https://github.com/doamatto/vote-to-mute to see when this is added.")
 		} else if len(m.Mentions) == 1 {
 			// Mute only one user
-			str := "Will we be muting" + m.Mentions[0].Username + "? Vote on it!"
+			str := "Will we be muting " + m.Mentions[0].Username + " ? Vote on it!"
 			msg, err := s.ChannelMessageSend(m.ChannelID, str)
 			if err != nil {
 				log.Panicf("%v", err)
