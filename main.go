@@ -112,7 +112,8 @@ func reactAdd(s *discordgo.Session, r *discordgo.MessageReactionAdd) {
 	}
 
 	// See if threshold is met
-	if msg.Reactions[0].Emoji.Name == "👍" && msg.Reactions[0].Count > 8 {
+	if msg.Reactions[0].Emoji.Name == "👍" && msg.Reactions[0].Count >= 8 {
+		// Fetch ID
 		id := msg.Mentions[0].ID
 
 		// Mute the user, if the role already exists
