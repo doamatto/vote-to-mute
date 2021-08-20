@@ -16,6 +16,6 @@ This tool requires only one variables:
   4. Copying the `Token` value
 
 ## FAQ
-**Q: What permissions should the bot have?** The bot only needs `MANAGE_ROLES` (permission integer `268435456`). It needs:
-  - `MANAGE_ROLES`: to create a `Muted` role, if one doesn't already exist, that mutes the user across channels
-**Q: Is there a version of this bot already hosted?** I do not host a public bot, but some people do host instances for personal servers.
+**Q: What permissions should the bot have?** The bot only needs `MANAGE_ROLES` (permission integer `268435456`). It needs this to create a `Muted` role, if one doesn't already exist, that mutes the user across channels<br/>
+**Q: Is there a version of this bot already hosted?** I do not host a public bot, but some people do host instances for personal servers.<br/>
+**Q: Why did you make this?** Two reasons: wanted to experiment with `discordgo` some more, but also wanted to help a friend out with some moderation troubles on a server of theirs.
