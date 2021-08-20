@@ -97,7 +97,7 @@ func reactAdd(s *discordgo.Session, r *discordgo.MessageReactionAdd) {
 	if err != nil {
 		log.Panicf("%v", err)
 	}
-	g := msg.GuildID
+	g := r.GuildID
 
 	// TODO: add a vote age limit (a day or so)
 
